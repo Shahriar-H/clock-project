@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Project</title>
+    <link rel="stylesheet" href="./clock.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="hor" >
+            <div class="hr" id="hor"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec" >
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var scnd = 6;
+    
+        setInterval(anim , );
+
+        function anim(){
+            let day = new Date();
+            let hour = day.getHours() * 30;
+            let minute = day.getMinutes() * scnd;
+            let second = day.getSeconds() * scnd ;
+    
+            document.querySelector('#hor').style.transform = `rotateZ(${(hour)+(minute/12)}deg)`;
+            document.querySelector('#mn').style.transform = `rotateZ(${minute}deg)`;
+            document.querySelector('#sc').style.transform = `rotateZ(${second}deg)`;
+    
+    
+        }            
+
+    
+    
+    
+    </script>
+</body>
+</html>
